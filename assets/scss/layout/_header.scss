@@ -1,0 +1,72 @@
+header{
+    height: 80px;
+    background-color: #212529;
+    top: 0;
+    // background-color: transparent;
+    // transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 24px 0px;
+        &__logo{
+
+            a{
+                color: #ffc800;
+                font-family: $headerfontfamily;
+    font-weight: 700;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+
+
+    img{
+        height: 2rem;
+        transition: height 0.3s ease-in-out;
+    }
+
+    }
+
+
+            }
+
+
+        
+
+       &-right{
+        display: flex;
+        &__link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           
+            &-item {
+                margin-right: 16px;
+                a {
+                    font-family: $headerfontfamily;
+    font-size: 0.95rem;
+    color: #fff;
+    letter-spacing: 0.0625em;
+    text-decoration: none;
+                    
+                }
+
+            }
+        }
+        &__btn{
+            color: white;
+            font-size: 20px;
+            background-color: #25292ac2;
+            padding: 2px 8px;
+            border-radius: 10px;
+            display: none;
+        }
+    }
+}
+}
