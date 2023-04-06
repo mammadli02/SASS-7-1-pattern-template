@@ -266,16 +266,16 @@ color: $mainwhite;
     line-height: 1.2;
     color: $mainwhite;
     }
-    // .clickk{
-    //     // @include button ($mainwhite, $black, rgb(218, 211, 211))
+    .clickk{
+    @include button ($mainwhite, $black, rgb(218, 211, 211))
         
         
        
-    // }
-    // .lookk{
-    //     // @include button ($black,$mainwhite,$gray3)
+   }
+    .lookk{
+    @include button ($black,$mainwhite,$gray3)
       
-    // }
+     }
         }
         
     
