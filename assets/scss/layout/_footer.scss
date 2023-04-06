@@ -1,0 +1,43 @@
+footer{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+  
+   a{
+display: inline-block;
+    text-decoration: none;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4.3rem;
+    font-size: 1.5rem;
+    background-color: $mainblue;
+    transition: background-color 0.15s ease-in-out;
+    color: $mainwhite;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    &:hover{
+        background-color: $blue2;
+    }
+   }
+   p{
+    color: $gray2 ;
+    font-size: 0.875em;
+
+   }
+}
+.to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+   
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: $mainwhite;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 50px;
+    &:hover{
+        background-color:  $gray3;
+    }
+}

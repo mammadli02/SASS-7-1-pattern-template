@@ -43,6 +43,11 @@ header .nav-right__link {
 header .nav-right__link-item {
   margin-right: 16px;
 }
+@media (max-width: 998px) {
+  header .nav-right__link-item {
+    display: none;
+  }
+}
 header .nav-right__link-item a {
   font-family: "Montserrat", sans-serif;
   font-size: 0.95rem;
@@ -52,15 +57,22 @@ header .nav-right__link-item a {
 }
 header .nav-right__btn {
   color: white;
-  font-size: 20px;
-  background-color: rgba(37, 41, 42, 0.7607843137);
-  padding: 2px 8px;
+  font-size: 30px;
+  background-color: transparent;
+  padding: 1px 6px;
+  position: fixed;
   border-radius: 10px;
+  right: 30px;
+  top: 10px;
   display: none;
+}
+@media (max-width: 998px) {
+  header .nav-right__btn {
+    display: block;
+  }
 }
 
 main {
-  height: 100vh;
   margin-top: 80px;
 }
 main #hero {
@@ -101,6 +113,9 @@ main #hero .col-12 a {
   color: white;
   border-radius: 10px;
 }
+main #hero .col-12 a:hover {
+  background-color: #13596f;
+}
 main #about {
   background-color: #e9ecef;
   padding-top: 7.5rem;
@@ -135,10 +150,14 @@ main #about .col-12 .links {
   color: white;
   border-radius: 10px;
 }
+main #about .col-12 .links:hover {
+  background-color: #2e353b;
+}
 main #services {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   background-color: #1D809F;
+  text-align: center;
 }
 main #services .para {
   text-align: center;
@@ -156,11 +175,12 @@ main #services .para h2 {
 main #services .img {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-main #services .img .col-3 {
+main #services .img .col-lg-3 {
   text-align: center;
 }
-main #services .img .col-3 span {
+main #services .img .col-lg-3 span {
   background-color: #fff;
   color: #1D809F;
   height: 7rem;
@@ -173,7 +193,7 @@ main #services .img .col-3 span {
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
-main #services .img .col-3 h4 {
+main #services .img .col-lg-3 h4 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 700;
@@ -181,7 +201,7 @@ main #services .img .col-3 h4 {
   font-size: 25px;
   color: white;
 }
-main #services .img .col-3 p {
+main #services .img .col-lg-3 p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 15px;
 }
@@ -213,6 +233,9 @@ main #downloadnow .col-12 a {
   display: block;
   color: white;
   border-radius: 10px;
+}
+main #downloadnow .col-12 a:hover {
+  background-color: #13596f;
 }
 
 #portfolio {
@@ -348,4 +371,108 @@ main #downloadnow .col-12 a {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 4rem;
+}
+#team .col-lg-4 img {
+  width: 100px;
+  height: 100px;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 14rem;
+  height: 14rem;
+  margin-top: 5px;
+}
+#team .col-lg-4 h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 700;
+  line-height: 1.2;
+}
+#team .col-lg-4 p {
+  color: #6c757d;
+  line-height: 1.75;
+  font-weight: 500;
+}
+#team .col-lg-4 a {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0;
+  border-radius: 100%;
+  border: 3px solid black;
+  background-color: black;
+  margin-left: 10px;
+}
+#team .col-lg-4 a i {
+  color: white;
+}
+
+#call {
+  background-color: #1D809F;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  text-align: center;
+}
+#call h2 {
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+}
+#call .click {
+  padding: 1.25rem 2.5rem;
+  margin-right: 1.5rem;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+#call .click:hover {
+  background-color: black;
+}
+
+
+footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4.3rem;
+  font-size: 1.5rem;
+  background-color: #1D809F;
+  transition: background-color 0.15s ease-in-out;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+footer a:hover {
+  background-color: #13596f;
+}
+footer p {
+  color: #6c757d;
+  font-size: 0.875em;
+}
+
+.to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 50px;
+}
+.to-top:hover {
+  background-color: #2e353b;
 }/*# sourceMappingURL=main.css.map */

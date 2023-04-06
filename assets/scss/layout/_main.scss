@@ -1,5 +1,5 @@
 main{
-    height: 100vh;
+font-family: $mainfontfamily;
     margin-top: 80px;
     #hero{
         height: 100vh;
@@ -10,16 +10,16 @@ background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 2
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+ 
         .col-12{
-      flex-direction: column;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+            @extend %col-12;
+//      
        h1{
         font-size: 4rem;
         display: block;
     margin: 0;
     padding: 0;
+    font-weight:500 ;
 margin-bottom: 4px;
        }
         h3{
@@ -30,13 +30,10 @@ margin-bottom: 4px;
     line-height: 1.2;
         }
         a{
-            padding: 1.25rem 2.5rem;
-            background-color: #1d809f;
-            text-decoration: none;
-            display: block;
-            color: white;
-            border-radius: 10px;
+            @include button ($mainblue,$mainwhite,$blue2)
+            
         }
+
         }
     }
     
@@ -45,13 +42,10 @@ margin-bottom: 4px;
     background-color: #e9ecef;
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
+ 
     .col-12{
-
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        @extend %col-12;
+    
     h2{
         font-size: 30px;
         margin-bottom: 0.5rem;
@@ -63,23 +57,22 @@ margin-bottom: 4px;
     font-size: 1.25rem;
     font-weight: 300;
     .link{
-        color:#1D809F;
+        color:$mainblue;
     text-decoration: underline;
 }
    }
 .links{
-    padding: 1.25rem 2.5rem;
-    background-color: #212529;
-    text-decoration: none;
-    color: white;
-    border-radius: 10px;
+    @include button($maingray,$mainwhite,$gray3)
+  
     }
    }
 }
 #services{
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
-    background-color: #1D809F;
+    background-color: $mainblue;
+    text-align: center;
+ 
     .para{
         text-align: center;
         h3{
@@ -89,20 +82,21 @@ margin-bottom: 4px;
         }
         h2{
             font-size: 3rem;
-            color: white;
+            color: $mainwhite;
             margin-bottom: 3rem
         }
     }
     .img{
         display: flex;
 justify-content: space-between;
+flex-wrap: wrap;
 
-        .col-3{
+        .col-lg-3{
 text-align: center;
 
             span{
-                background-color: #fff;
-                color: #1D809F;
+                background-color: $mainwhite;
+                color: $mainblue;
                 height: 7rem;
                 width: 7rem;
                 display: inline-block;
@@ -119,7 +113,7 @@ text-align: center;
     font-weight: 700;
     line-height: 1.2;
     font-size: 25px;
-    color: white;
+    color: $mainwhite;
 }
 p{
     color: rgba(255, 255, 255, 0.7);
@@ -136,11 +130,8 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
     .col-12{
-        text-align: center;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend %col-12;
+      
         h2{
             font-size: 3.5rem;
     font-weight: 700;
@@ -150,29 +141,18 @@ p{
 
         }
         a{
-            padding: 1.25rem 2.5rem;
-            background-color: #1d809f;
-            text-decoration: none;
-            display: block;
-            color: white;
-            border-radius: 10px;
+            @include button($mainblue,$mainwhite,$blue2)
+           
         }
     }
 }
         }
     
 
-
-
-
-
-
-
-
-
         #portfolio{
             padding-top: 7.5rem;
             padding-bottom: 7.5rem;
+            
         
 .parag{
     text-align: center;
@@ -191,102 +171,21 @@ p{
 }
 
 .div1{
-    background: url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-1.jpg");
-   padding: 5rem;
-   color: white;
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   transition: .5s;
-    h2{
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    }
-    p{
-        font-weight: 300;
-        font-size: 1.2rem;
-
-    }
-    &:hover{
-        background: linear-gradient(90deg, rgba(32,27,117,1) 0%, rgba(23,102,127,1) 100%);
-        transform: scale(0.5);
-    }
+    @include portfoliocard (url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-1.jpg"));
+//    
 }
 .div2{
-    background: url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-2.jpg");
-    padding: 5rem;
-   color: white;
-   background-position: center center;
-   background-repeat: no-repeat;
-   transition: .5s;
-   background-size: cover;
-   h2{
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-font-weight: 700;
-line-height: 1.2;
-}
-p{
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-&:hover{
-    background: linear-gradient(90deg, rgba(32,27,117,1) 0%, rgba(23,102,127,1) 100%);
-    transform: scale(0.5);
-}
+    @include portfoliocard( url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-2.jpg"))
+//    
 }
 
 .div3{
-    background: url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-3.jpg");
-    padding: 5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: .5s;
-   color: white;
-   h2{
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-font-weight: 700;
-line-height: 1.2;
-}
-p{
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-&:hover{
-    background: linear-gradient(90deg, rgba(32,27,117,1) 0%, rgba(23,102,127,1) 100%);
-    transform: scale(0.5);
-}
+    @include portfoliocard (url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-3.jpg"))
+//     
 }
 .div4{
-    background: url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-4.jpg");
-    padding: 5rem;
-   color: white;
-   background-position: center center;
-   transition: .5s;
-   background-repeat: no-repeat;
-   background-size: cover;
-   h2{
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-font-weight: 700;
-line-height: 1.2;
-}
-p{
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-&:hover{
-    background: linear-gradient(90deg, rgba(32,27,117,1) 0%, rgba(23,102,127,1) 100%);
-    transform: scale(0.5);
-}
+    @include portfoliocard (url("https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/portfolio-4.jpg"))
+//     
 }
         }
         #team{
@@ -303,10 +202,81 @@ p{
 
             }
             h3{
-                color: #6c757d;
+                color: $gray2;
                 font-size: 1rem;
     font-weight: 400;
    
     margin-bottom: 4rem;
             }
+            .col-lg-4{
+           
+                
+
+img{
+    width: 100px;
+    height: 100px;
+    border: 0.5rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 14rem; 
+    height: 14rem;
+margin-top: 5px;
+   
+}
+h4{
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: calc(1.275rem + 0.3vw);
+    font-weight: 700;
+    line-height: 1.2;
+}
+p{
+    color: $gray2;
+    line-height: 1.75;
+    font-weight: 500;
+}
+a{
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0;
+    border-radius: 100%;
+    border: 3px solid $black;
+    background-color: $black;
+    margin-left: 10px;
+    i{
+color: $mainwhite;
+;
+    }
+   
+}
+
+            }
         }
+        #call{
+            background-color: $mainblue;
+            padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    text-align: center;
+    h2{
+        margin-bottom: 2.5rem;
+        font-weight: 700;
+    line-height: 1.2;
+    color: $mainwhite;
+    }
+    // .clickk{
+    //     // @include button ($mainwhite, $black, rgb(218, 211, 211))
+        
+        
+       
+    // }
+    // .lookk{
+    //     // @include button ($black,$mainwhite,$gray3)
+      
+    // }
+        }
+        
+    
+    
